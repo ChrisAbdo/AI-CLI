@@ -1,0 +1,20 @@
+{
+  "name": "iforget",
+  "version": "1.0.31",
+  "main": "index.ts",
+  "bin": {
+    "iforget": "./index.ts"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "openai": "^4.26.0"
+  }
+}
