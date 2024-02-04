@@ -2,6 +2,8 @@
 
 iforget is a command-line interface tool that uses OpenAI's GPT-4 to convert user instructions into executable terminal commands. Who remembers every command anyway?
 
+![iforget cli](https://vyzfg1hdiv0uevlh.public.blob.vercel-storage.com/A3F1BE38-6119-49D7-9CA0-7B79E0EE5C03-8CK7VFeeTeBj5FgCIlH6tU4kzEyt0D.jpeg)
+
 ## Prerequisites
 
 - [Bun](https://bun.sh) as the JavaScript runtime.
