@@ -6,17 +6,9 @@ import chalk from "chalk";
 import os from "os";
 import path from "path";
 
-const iforget = `
- _  __                      _   
-(_)/ _| ___  _ __ __ _  ___| |_ 
-| | |_ / _ \\| '__/ _\` |/ _ \\ __|
-| |  _| (_) | | | (_| |  __/ |_ 
-|_|_|  \\___/|_|  \\__, |\\___|\\__|
-                 |___/          `;
-
-const apiKeyFilePath = path.join(os.homedir(), ".your_script_api_key");
-
 async function getOrRequestApiKey(): Promise<string> {
+  const apiKeyFilePath = path.join(os.homedir(), ".your_script_api_key");
+
   if (await Bun.file(apiKeyFilePath).exists()) {
     const apiKey = await Bun.file(apiKeyFilePath).text();
     if (apiKey.startsWith("sk-") && apiKey.length === 51) {
@@ -29,7 +21,13 @@ async function getOrRequestApiKey(): Promise<string> {
       );
     }
   }
-
+  const iforget = `
+  _  __                      _   
+ (_)/ _| ___  _ __ __ _  ___| |_ 
+ | | |_ / _ \\| '__/ _\` |/ _ \\ __|
+ | |  _| (_) | | | (_| |  __/ |_ 
+ |_|_|  \\___/|_|  \\__, |\\___|\\__|
+                  |___/          `;
   console.log(chalk.magentaBright(iforget));
   console.log(
     chalk.yellow("Please enter your OpenAI API key (THIS GETS STORED LOCALLY):")
