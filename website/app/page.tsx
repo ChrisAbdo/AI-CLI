@@ -32,6 +32,8 @@ import { cn } from "@/lib/utils";
 import TextShimmer from "@/components/ui/text-shimmer";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import { BorderBeam } from "@/components/ui/border-beam";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Home() {
   return (
@@ -41,6 +43,7 @@ export default function Home() {
       {/* <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
         Backgrounds
       </p> */}
+      <ModeToggle />
       <div className="relative isolate pt-14">
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -74,16 +77,14 @@ export default function Home() {
                 <Button variant="secondary">Learn more</Button>
               </div>
             </div>
-            <div className="mt-16 flow-root sm:mt-24">
-              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <img
-                  src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
-                  alt="App screenshot"
-                  width={2432}
-                  height={1442}
-                  className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-                />
-              </div>
+            <div className="relative rounded-xl">
+              <img
+                src="https://camo.githubusercontent.com/fff26cf3d903fa17887ebc137730cb53a51b57211534e7c8938dc65bf75eb9c7/68747470733a2f2f76797a66673168646976307565766c682e7075626c69632e626c6f622e76657263656c2d73746f726167652e636f6d2f41334631424533382d363131392d343944372d394341302d3742373945304545354330332d38434b37564665655465426a35466743496c48367455346b7a45797430442e6a706567"
+                alt="Hero Image"
+                className="block max-w-[700px] rounded-[inherit] border object-contain shadow-lg"
+              />
+
+              <BorderBeam className="z-50" size={250} duration={12} delay={9} />
             </div>
           </div>
         </div>
